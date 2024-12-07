@@ -15,6 +15,7 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import Grid from '@mui/material/Unstable_Grid2';
 import {useState} from 'react';
+import nav_logo from '../../Images/nav-logo.jpg';
 import { Link } from 'react-scroll';
 interface Props {
 
@@ -61,10 +62,8 @@ const Navbar:any = (props: Props) => {
 //Responsive drawer
 
     const drawer = (
-        <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-          <Typography variant="h6" sx={{ my: 2 }}>
-            MUI
-          </Typography>
+        <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center',py:'5px' }}>
+          <img width={'90px'} height={'80px'} src={nav_logo} alt="" />
           <Divider />
           <List>
             {navItems.map(({item,href}) => (
@@ -101,13 +100,11 @@ const Navbar:any = (props: Props) => {
           </IconButton>
           
         <Grid sm={4}>
-        <Typography
-            variant="h6"
-            component="div"
-            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
+        <Box
+            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' },py:'5px' }}
           >
-            MUI
-          </Typography>
+            <img width={'90px'} height={'80px'} src={nav_logo} alt="" />
+          </Box>
         </Grid>
           <Grid sm={8}>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}

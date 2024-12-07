@@ -13,7 +13,11 @@ import c from '../../Images/c.png'
 import git from '../../Images/git.svg'
 import ts from '../../Images/typescript.jpg'
 import nextjs from '../../Images/nextjs.png'
+import msql from '../../Images/msql.png'
+import php from '../../Images/php.png'
 import Modal from '@mui/material/Modal';
+import {motion} from 'framer-motion'
+import {fadeIn} from '../FramerMotion/variants'
 
 const style = {
   position: 'absolute' as 'absolute',
@@ -81,6 +85,15 @@ const technologies=[
     }
   },
   {
+    name:'PHP',
+    percentage:'30%',
+    src:`${php}`,
+    style:{
+      backgroundColor:'#777bb3',
+      boxShadow:'0 0 5px #777bb3, 0 0 15px #777bb3,0 0 30px #777bb3'
+    }
+  },
+  {
     name:'C',
     percentage:'40%',
     src:`${c}`,
@@ -117,6 +130,15 @@ const technologies=[
     }
   },
   {
+    name:'MYSQL',
+    percentage:'50%',
+    src:`${msql}`,
+    style:{
+      backgroundColor:'#bd844a',
+      boxShadow:'0 0 5px #bd844a, 0 0 15px #bd844a,0 0 30px #bd844a'
+    }
+  },
+  {
     name:'MONGODB',
     percentage:'50%',
     src:`${mongodb}`,
@@ -148,14 +170,25 @@ const technologies=[
 
   return (
     <Box sx={{backgroundColor:'#020b1c'}} id='skills'>
+      <motion.div
+      variants={fadeIn("down",0.2)}
+      initial="hidden"
+      whileInView={"show"}
+      viewport={{once:false,amount:0.7}}
+    >
       <Typography sx={{color:' #fdfeff',display:'flex',justifyContent:'center',py:{xs:'50px',sm:'100px'},boxShadow:'0 0 6px rgb(41,185,82), 0 0 3px beige inset',fontFamily:''}}variant='h4'>Ski<span style={{color:'#ef6c00'}}>lls</span></Typography>
       <Typography sx={{color:'white', textAlign:'center',marginY:'50px'}} variant='h6'>The Technologies I am Worked With</Typography>
-   
+      </motion.div>
 
    <Grid container rowGap={{xs:4,sm:4,md:4}} sx={{mx:{xs:'30px',sm:'50px',md:'50px'},py:'20px'}}>
   {technologies.map(({name,percentage,src,style}, index:number) => (
     <Grid xs={12} sm={6} md={4} key={index}>
-    
+    <motion.div
+      variants={fadeIn("left",0.2)}
+      initial="hidden"
+      whileInView={"show"}
+      viewport={{once:false,amount:0.7}}
+    >
     
        <img src={src} style={{width:'40px',height:'40px', backgroundColor:'white'}} alt="" />
  
@@ -163,6 +196,7 @@ const technologies=[
 <div style={{width:'95%',backgroundColor:'#ddd',marginTop:'5px'}}>
   <div style={{...style,textAlign:'right',color:'white',width:`${percentage}`,fontSize:'15px'}}>{name}   {percentage}</div>
 </div>
+</motion.div>
     </Grid>
   ))}
 </Grid>

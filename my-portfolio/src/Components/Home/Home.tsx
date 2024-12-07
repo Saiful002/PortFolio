@@ -9,7 +9,8 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import {useState} from 'react';
-
+import {motion} from 'framer-motion'
+import {fadeIn} from '../FramerMotion/variants'
 
 const Home = () => {
   const [isHovering, setIsHovering] = useState(-1);
@@ -55,21 +56,26 @@ const Home = () => {
   ]
 
 
-   const Customstyle={color: isHovering ? 'blue': '#fec544',
-backgroundColor:isHovering ? 'white': 'black',
-border:isHovering ?'1px solid #fff8e1': 'none',
-boxShadow:isHovering ?'1px 1px ':'none',
-borderRadius:isHovering ?'50px':'none',}
+//    const Customstyle={color: isHovering ? 'blue': '#fec544',
+// backgroundColor:isHovering ? 'white': 'black',
+// border:isHovering ?'1px solid #fff8e1': 'none',
+// boxShadow:isHovering ?'1px 1px ':'none',
+// borderRadius:isHovering ?'50px':'none',}
 
     
   return (
-   <Box style={{backgroundImage:`url(${pf2})`,backgroundSize:'cover',backgroundRepeat:'no-repeat'}} sx={{pb:{xs:'50px'}}} id='home'>
+   <Box style={{backgroundImage:`url(${pf2})`,backgroundSize:'cover',backgroundRepeat:'no-repeat'}} sx={{pb:{xs:'50px'},py:'40px'}} id='home'>
     <Grid container sx={{alignItems:'center',marginX:'25px'}} >   
     <Grid sm={6} md={8}>
 
 {/* Animated text from simple typewriter */}
 
-    <h1 style={{ paddingTop: '5rem',  fontWeight: 'normal',color:'white',lineHeight:'80px'}}>
+    <motion.h1 
+    variants={fadeIn("right",0.2)}
+    initial="hidden"
+    whileInView={"show"}
+    viewport={{once:false,amount:0.7}}
+    style={{ paddingTop: '5rem',  fontWeight: 'normal',color:'white',lineHeight:'80px'}}>
        Hey I'm <br /> <span style={{fontWeight: 'bold',color:'white',fontSize:'40px' }}>Saiful Kabir Chowdhury</span> <br />a{' '}
         <span style={{ color: '#ef6c00', fontWeight: 'normal' }}>                          
           
@@ -84,7 +90,7 @@ borderRadius:isHovering ?'50px':'none',}
             
           />
         </span>
-      </h1>
+      </motion.h1>
 <Box>
 
 
@@ -100,9 +106,14 @@ borderRadius:isHovering ?'50px':'none',}
      
     </Grid>
     <Grid sm={6} md={4} sx={{display:{xs:'none',sm:'flex'},justifyContent:'center',}}>
-
+    <motion.div
+      variants={fadeIn("left",0.2)}
+      initial="hidden"
+      whileInView={"show"}
+      viewport={{once:false,amount:0.7}}
+    >
 <img src={`${pf1}`} alt="" style={{marginTop:'50px',backgroundColor:'grey',width:'100%',height:'auto'}}/>
-
+</motion.div>
 
     </Grid>
 

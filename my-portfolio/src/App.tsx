@@ -7,7 +7,7 @@ import States from './Components/States/States';
 function App() {
   return (
     
-   <div>
+   <div className='App'>
     <States></States>
    </div>
     
