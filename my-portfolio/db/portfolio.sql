@@ -1,0 +1,11 @@
+-- Active: 1726242650294@@127.0.0.1@3306@myportfolio
+CREATE DATABASE myportfolio;
+
+USE myportfolio;
+
+CREATE TABLE mails (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    yourmail VARCHAR(255) NOT NULL,
+    body TEXT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);

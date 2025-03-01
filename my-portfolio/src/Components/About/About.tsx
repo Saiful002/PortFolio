@@ -7,6 +7,14 @@ import {fadeIn} from '../FramerMotion/variants'
 
 const About = () => {
     const [isHovering, setIsHovering] = useState(false);
+
+    const handleDownload = () => {
+      // Triggering download
+      const link = document.createElement('a');
+      link.href = '/cv/updated_cv.pdf';  // Path to your CV
+      link.download = 'Saiful_CV.pdf'; // Name that will appear when downloaded
+      link.click();
+    };
   return (
 
 
@@ -24,14 +32,20 @@ const About = () => {
 
 
    
-    <Grid sm={6} md={6} sx={{display:{xs:'flex',sm:'flex'},justifyContent:'center',}}>
+    <Grid sm={6} md={4} sx={{
+            display: { xs: "flex", sm: "flex" },
+            justifyContent: "center",
+            height: "100%",
+            width: "100%",
+            mx: "auto",
+          }}>
     <motion.div
       variants={fadeIn("right",0.2)}
       initial="hidden"
       whileInView={"show"}
       viewport={{once:false,amount:0.7}}
     >
-<img src={`${aboutbg}`} alt="" style={{margin:'30px 0px 30px 0px',width:'70%',height:'90%'}}/>
+<img src={`${aboutbg}`} alt="" style={{margin:'30px 0px 30px 0px',width:'90%',height:'87%',borderRadius:"5%"}}/>
 </motion.div>
 
     </Grid>
@@ -56,7 +70,7 @@ const About = () => {
         
       </Box>
 
-      <Button variant="contained" sx={{display:'flex',justifyContent:'right' ,backgroundColor:'#ffd066',color:'black',my:'50px',fontWeight:'bold'}}
+      <Button onClick={handleDownload} variant="contained" sx={{display:'flex',justifyContent:'right' ,backgroundColor:'#ffd066',color:'black',my:'50px',fontWeight:'bold'}}
       
       style={{
         backgroundColor: isHovering ? '#fec544': '#ffd066',

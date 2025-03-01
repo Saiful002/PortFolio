@@ -40,12 +40,12 @@ interface Props {
     href:"#skills"
   },
   {
-    item:'Portfolio',
-    href:"#portfolio"
+    item:'Projects',
+    href:"#projects"
   },
   {
     item:'Contact',
-    href:"#contact"
+    href:"#mail"
   },
  ]
 
@@ -65,7 +65,7 @@ const Navbar:any = (props: Props) => {
         <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center',py:'5px' }}>
           <img width={'90px'} height={'80px'} src={nav_logo} alt="" />
           <Divider />
-          <List>
+          <List sx={{mx:'50px'}}>
             {navItems.map(({item,href}) => (
               <ListItem key={item} disablePadding>
                 <ListItemButton sx={{ textAlign: 'center' }} href={href}>
@@ -133,7 +133,7 @@ const Navbar:any = (props: Props) => {
 
       <Box component="nav">
         <Drawer
-          container={container}
+          // container={container}
           variant="temporary"
           open={mobileOpen}
           onClose={handleDrawerToggle}
@@ -142,7 +142,7 @@ const Navbar:any = (props: Props) => {
           }}
           sx={{
             display: { xs: 'block', sm: 'none' },
-            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },textAlign:"center"
           }}
         >
           {drawer}
