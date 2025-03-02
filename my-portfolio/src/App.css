@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 .App{
   margin: 0;
+  padding: 0;
 font-family:Verdana, Geneva, Tahoma, sans-serif
   /* background-image: url(./Images/bg_1.jpg);
   background-size: cover;

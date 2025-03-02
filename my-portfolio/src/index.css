@@ -1,10 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300');
-body {
-margin:0;
-/* font-family: 'Comfortaa', sans-serif; */
-  /* background-image: url(./Images/bg_1.jpg);
-  background-size: cover;
-  background-repeat: no-repeat; */
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 code {

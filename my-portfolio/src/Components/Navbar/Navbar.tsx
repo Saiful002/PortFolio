@@ -88,7 +88,7 @@ const Navbar:any = (props: Props) => {
       
       <AppBar component="nav">
       
-        <Toolbar sx={{ display: 'flex'}} style={{backgroundColor:'black',opacity:'0.8'}}>
+        <Toolbar sx={{ display: 'flex', mx:"0px"}} style={{backgroundColor:'black',opacity:'0.8'}}>
           <IconButton
             color="inherit"
             aria-label="open drawer"
