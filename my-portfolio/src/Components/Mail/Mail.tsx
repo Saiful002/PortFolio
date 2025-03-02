@@ -19,7 +19,7 @@ const Mail: React.FC = () => {
 
   const handleSubmit = async () => {
     try {
-      const response = await fetch("https://saifulkabirchowdhury.vercel.app/send-mail", {
+      const response = await fetch("http://localhost:5000/send-mail", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
