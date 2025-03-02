@@ -154,6 +154,10 @@ const Mail: React.FC = () => {
               >
                 Send Mail
               </Button>
+              <Box sx={{color:"white",mt:'3px'}}>
+              <span>OR</span>
+              <p> Direct mail: csaifulkabir@gmail.com</p>
+              </Box>
             </Box>
           </motion.div>
         </Grid>
