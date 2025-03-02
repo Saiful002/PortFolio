@@ -32,10 +32,12 @@ const Mail: React.FC = () => {
         alert("Mail sent successfully!");
         setFormData({ yourmail: "", body: "" }); // Clear form after success
       } else {
-        alert("Error: " + data.message);
+        alert("Ooops Server not started!");
+        setFormData({ yourmail: "", body: "" });
       }
     } catch (error) {
-      console.error("Error:", error);
+      alert("Ooops Server not started!");
+        setFormData({ yourmail: "", body: "" });
     }
   };
 
