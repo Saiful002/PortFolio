@@ -38,7 +38,9 @@ const db = mysql.createConnection({
     },
   });
 
-
+app.get('/',(req,res)=>{
+  res.json("Hello")
+})
 
   app.post("/send-mail", (req, res) => {
     const { yourmail, body } = req.body;
