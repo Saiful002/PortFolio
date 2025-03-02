@@ -11,8 +11,8 @@ const About = () => {
     const handleDownload = () => {
       // Triggering download
       const link = document.createElement('a');
-      link.href = '/cv/updated_cv.pdf';  // Path to your CV
-      link.download = 'Saiful_CV.pdf'; // Name that will appear when downloaded
+      link.href = '/cv/Saiful_Resume.pdf';  // Path to your CV
+      link.download = 'Saiful_Resume.pdf'; // Name that will appear when downloaded
       link.click();
     };
   return (

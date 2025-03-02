@@ -65,7 +65,7 @@ const projects: Project[] = [
       { icon: `${firebase}` },
     ],
     github: "https://github.com/Saiful002/Round-Trip",
-    live: "#",
+    live: "https://github.com/Saiful002/Round-Trip",
   },
 
 ];
