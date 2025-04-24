@@ -238,13 +238,13 @@ const Skills = () => {
                 <div
                   style={{
                     ...style,
-                    textAlign: "right",
+                    textAlign: "center",
                     color: "white",
-                    width: `${percentage}`,
+                    // width: `${percentage}`,
                     fontSize: "15px",
                   }}
                 >
-                  {name} {percentage}
+                  {name}
                 </div>
               </div>
             </motion.div>
